@@ -56,6 +56,8 @@ while !$characters[0].empty? and !$characters[1].empty?
    end
 
    for hero in $characters[0]
+      break if $characters[1].empty?
+
       if hero.name == "Jin Sakai"
          control(hero)
          next
@@ -72,6 +74,8 @@ while !$characters[0].empty? and !$characters[1].empty?
    puts "\n"
 
    for enemy in $characters[1]
+      break if $characters[0].empty?
+
       target = rand(0...$characters[0].length)
       enemy.attack($characters[0][target])
       
@@ -84,4 +88,4 @@ while !$characters[0].empty? and !$characters[1].empty?
    puts "\n"
 end
 
-puts(!($characters[0].empty?) ? "Allies win" : "Mongols win")
+puts(!($characters[0].empty?) ? "Heroes win" : "Villains win")
