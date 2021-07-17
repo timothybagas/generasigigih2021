@@ -9,7 +9,7 @@
 </center>
 
 #1) Answer for question number 1
-<br>
+<br><br>
 <img src="HW_Module_2_Session_3.jpeg" style="width:100%;"/>
 
 <br>
