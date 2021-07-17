@@ -14,7 +14,7 @@
 
 <br>
 2) Answers for question 2 - 4
-<br>
+<br><br>
 
 ```sql
 CREATE TABLE items (
