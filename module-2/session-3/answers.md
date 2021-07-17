@@ -8,12 +8,12 @@
 <br>
 </center>
 
-1) Answer for question number 1
+#1) Answer for question number 1
 <br>
 <img src="HW_Module_2_Session_3.jpeg" style="width:100%;"/>
 
 <br>
-2) Answers for question 2 - 4
+#2) Answers for question 2 - 4
 <br><br>
 
 ```sql
