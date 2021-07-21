@@ -1,0 +1,19 @@
+<h1>Items</h1>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+	</tr>
+	<% items.each do |item| %>
+	<% next if item == nil %>
+	<tr>
+		<td><%= item.name %></td>
+		<td><%= item.price %></td>
+		<td><a href="/items/<%= item.id %>/show">Show</a></td>
+		<td><a href="/items/<%= item.id %>/edit">Edit</a></td>
+		<td><a href="/items/<%= item.id %>/delete"><button>Delete</button></a></td>
+	</tr>
+	<% end %>
+</table>
+
+<a href="/items/new">New item</a>
