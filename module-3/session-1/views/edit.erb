@@ -1,0 +1,19 @@
+<h1>Edit <%= item.name %></h1>
+
+<form method="POST" action="/items/update">
+  <input type="text" name="item_name" value="<%= item.name %>"/>
+  <input type="text" name="item_price" value="<%= item.price %>"/>
+
+  <select name="category_id">
+    <% categories.each do |category| %>
+      <% if category.name == item.category.name %>
+        <option value="<%= category.id %>" selected><%= category.name %></option>
+      <% else %>
+        <option value="<%= category.id %>"><%= category.name %></option>
+      <% end %>
+    <% end %>
+  </select>
+
+  <input type="hidden" name="item_id" value="<%= item.id %>"/>
+  <button type="submit">Update Item</button>
+</form>
