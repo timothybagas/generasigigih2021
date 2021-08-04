@@ -1,0 +1,25 @@
+<h1>Categories</h1>
+
+<a href="/items">Show all items</a>
+<br><br>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% categories.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><a href="/categories/<%= category.id %>/show">Show Items</a></td>
+      <td><a href="/categories/<%= category.id %>/edit">Edit</a></td>
+      <td>
+        <form method="POST" action="/categories/<%= category.id %>/delete">
+          <input type="hidden" name="_method" value="delete"/>
+          <button type="submit">Delete</button>
+			  </form>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<a href="/categories/new">New category</a>
