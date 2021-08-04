@@ -18,14 +18,14 @@ describe Item do
 
     context 'when it called with parameter (invalid category_id)' do
       it 'should empty' do
-        items = Item.get_all_items(100)
+        items = Item.get_all_items(100) # 100 just an example of invalid id
         expect(items.empty?).to eq(true)
       end
     end
 
     context 'when it called with parameter -1' do
       it 'should not empty, because -1 indicates items which doesn\'t have a category' do
-        items = Item.get_all_items(-1)
+        items = Item.get_all_items(-1) # can be fail if all items have a category
         expect(items.empty?).to eq(false)
       end
     end
