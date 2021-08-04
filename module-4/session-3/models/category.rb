@@ -25,7 +25,7 @@ class Category
 		client = create_db_client
 		result = client.query("SELECT * FROM categories WHERE id = #{id}")
 		Category.new(result.first.nil? ?
-			{"id" => -1, "name" => "-"} : result.first)
+			{id: -1, name: "-"} : result.first)
 	end
 
 	def self.insert_category(category_name)
